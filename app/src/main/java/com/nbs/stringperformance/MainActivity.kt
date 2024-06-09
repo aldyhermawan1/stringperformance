@@ -1,6 +1,7 @@
 package com.nbs.stringperformance
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -19,8 +20,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -34,13 +35,15 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         val dbHelper = DbHelper(this)
+        val mainViewModel = MainViewModel()
 
         setContent {
             StringperformanceTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     StringScreen(
                         dbHelper =  dbHelper,
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding),
+                        viewModel = mainViewModel
                     )
                 }
             }
@@ -52,12 +55,12 @@ class MainActivity : ComponentActivity() {
 fun StringScreen(
     dbHelper: DbHelper,
     modifier: Modifier = Modifier,
+    viewModel: MainViewModel = MainViewModel(),
 ) {
     val context = LocalContext.current
-    val viewModel = MainViewModel()
-    val wordController by remember {
-        viewModel.wordController
-    }
+    val wordController by viewModel.wordController.collectAsState()
+
+    Log.d("TAG", "StringScreen: RECOMPOSE ${wordController}")
 
     LaunchedEffect(Unit) {
         viewModel.initDb(context, dbHelper)

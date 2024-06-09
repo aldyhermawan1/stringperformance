@@ -4,14 +4,16 @@ import android.content.ContentValues
 import android.content.Context
 import android.provider.BaseColumns
 import android.util.Log
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.nbs.stringperformance.data.DbContract
 import com.nbs.stringperformance.data.DbHelper
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
 
 class MainViewModel : ViewModel() {
-    var wordController = mutableStateOf("String resources")
+    private val _wordController = MutableStateFlow("String Resources")
+    val wordController = _wordController.asStateFlow()
 
     fun initDb(context: Context, dbHelper: DbHelper) {
         val enStrings = context.resources.getStringArray(R.array.data)
@@ -32,11 +34,11 @@ class MainViewModel : ViewModel() {
     }
 
     fun loadFromDb(dbHelper: DbHelper) {
-        wordController.value = ""
+        resetWordController()
 
         val db = dbHelper.readableDatabase
 
-        for (i in 0..149) {
+        for (i in 150 downTo 0) {
             val cursor = db.query(
                 DbContract.StringEntry.TABLE_NAME,
                 arrayOf(
@@ -51,24 +53,29 @@ class MainViewModel : ViewModel() {
             )
             with (cursor) {
                 while (moveToNext()) {
-                    val prefix = if (wordController.value.isEmpty()) {
+                    val prefix = if (_wordController.value.isEmpty()) {
                         ""
-                    } else "${wordController.value}, "
-                    wordController.value = prefix + getString(
+                    } else "${_wordController.value}, "
+                    _wordController.value = prefix + getString(
                         getColumnIndexOrThrow(DbContract.StringEntry.COLUMN_TEXT)
                     )
                 }
             }
             cursor.close()
         }
-        Log.d("TAG", "loadFromDb: ${wordController.value}")
+        Log.d("TAG", "loadFromDb: ${_wordController.value}")
     }
 
     fun loadFromXml(context: Context) {
-        wordController.value = ""
+        resetWordController()
 
         val strings = context.resources.getStringArray(R.array.data)
-        wordController.value = strings.joinToString(", ")
-        Log.d("TAG", "loadFromXml: ${wordController.value}")
+        _wordController.value = strings.joinToString(", ")
+        Log.d("TAG", "loadFromXml: ${_wordController.value}")
+    }
+
+    fun resetWordController() {
+        _wordController.value = ""
+        Log.d("TAG", "resetWordController: ${_wordController.value}")
     }
 }
