@@ -11,24 +11,35 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import com.nbs.stringperformance.data.DbHelper
 import com.nbs.stringperformance.ui.theme.StringperformanceTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        val dbHelper = DbHelper(this)
+
         setContent {
             StringperformanceTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     StringScreen(
+                        dbHelper =  dbHelper,
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -38,34 +49,47 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun StringScreen(modifier: Modifier = Modifier) {
+fun StringScreen(
+    dbHelper: DbHelper,
+    modifier: Modifier = Modifier,
+) {
+    val context = LocalContext.current
+    val viewModel = MainViewModel()
+    val wordController by remember {
+        viewModel.wordController
+    }
+
+    LaunchedEffect(Unit) {
+        viewModel.initDb(context, dbHelper)
+    }
+
+    DisposableEffect(Unit) {
+        onDispose {
+            dbHelper.close()
+        }
+    }
+
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = modifier.padding(16.dp),
+        modifier = modifier
+            .padding(16.dp)
+            .verticalScroll(rememberScrollState()),
     ) {
-        Text(text = "String resources")
+        Text(text = wordController)
         Spacer(modifier = Modifier.height(24.dp))
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { viewModel.loadFromXml(context) },
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(text = "Load from XML Resources")
         }
         Spacer(modifier = Modifier.height(16.dp))
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { viewModel.loadFromDb(dbHelper) },
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(text = "Load from DB")
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun StringScreenPreview() {
-    StringperformanceTheme {
-        StringScreen()
     }
 }

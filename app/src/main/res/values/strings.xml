@@ -1,154 +1,157 @@
 <resources>
     <string name="app_name">stringperformance</string>
 
-    <string name="label_settings">settings</string>
-    <string name="label_profile">profile</string>
-    <string name="label_message">message</string>
-    <string name="label_search">search</string>
-    <string name="label_connect">connect</string>
-    <string name="label_play">play</string>
-    <string name="label_save">save</string>
-    <string name="label_confirm">confirm</string>
-    <string name="label_high">high</string>
-    <string name="label_light">light</string>
-    <string name="label_news">news</string>
-    <string name="label_large">large</string>
-    <string name="label_communication">communication</string>
-    <string name="label_call">call</string>
-    <string name="label_photo">photo</string>
-    <string name="label_music">music</string>
-    <string name="label_game">game</string>
-    <string name="label_weather">weather</string>
-    <string name="label_map">map</string>
-    <string name="label_calendar">calendar</string>
-    <string name="label_reminder">reminder</string>
-    <string name="label_list">list</string>
-    <string name="label_share">share</string>
-    <string name="label_report">report</string>
-    <string name="label_support">support</string>
-    <string name="label_exit">exit</string>
-    <string name="label_back">back</string>
-    <string name="label_menu">menu</string>
-    <string name="label_more">more</string>
-    <string name="label_first">first</string>
-    <string name="label_previous">previous</string>
-    <string name="label_today">today</string>
-    <string name="label_week">week</string>
-    <string name="label_year">year</string>
-    <string name="label_january">january</string>
-    <string name="label_wednesday">wednesday</string>
-    <string name="label_friday">friday</string>
-    <string name="label_am">am</string>
-    <string name="label_morning">morning</string>
-    <string name="label_evening">evening</string>
-    <string name="label_available">available</string>
-    <string name="label_active">active</string>
-    <string name="label_visible">visible</string>
-    <string name="label_full">full</string>
-    <string name="label_required">required</string>
-    <string name="label_valid">valid</string>
-    <string name="label_error">error</string>
-    <string name="label_warning">warning</string>
-    <string name="label_success">success</string>
-    <string name="label_information">information</string>
-    <string name="label_update">update</string>
-    <string name="label_download">download</string>
-    <string name="label_install">install</string>
-    <string name="label_open">open</string>
-    <string name="label_close">close</string>
-    <string name="label_start">start</string>
-    <string name="label_stop">stop</string>
-    <string name="label_up">up</string>
-    <string name="label_down">down</string>
-    <string name="label_next">next</string>
-    <string name="label_before">before</string>
-    <string name="label_load">load</string>
-    <string name="label_cancel">cancel</string>
-    <string name="label_low">low</string>
-    <string name="label_off">off</string>
-    <string name="label_dark">dark</string>
-    <string name="label_old">old</string>
-    <string name="label_small">small</string>
-    <string name="label_account">account</string>
-    <string name="label_chat">chat</string>
-    <string name="label_email">email</string>
-    <string name="label_video">video</string>
-    <string name="label_book">book</string>
-    <string name="label_movie">movie</string>
-    <string name="label_navigation">navigation</string>
-    <string name="label_note">note</string>
-    <string name="label_less">less</string>
-    <string name="label_last">last</string>
-    <string name="label_tomorrow">tomorrow</string>
-    <string name="label_month">month</string>
-    <string name="label_february">february</string>
-    <string name="label_thursday">thursday</string>
-    <string name="label_saturday">saturday</string>
-    <string name="label_pm">pm</string>
-    <string name="label_afternoon">afternoon</string>
-    <string name="label_night">night</string>
-    <string name="label_unavailable">unavailable</string>
-    <string name="label_inactive">inactive</string>
-    <string name="label_hidden">hidden</string>
-    <string name="label_empty">empty</string>
-    <string name="label_optional">optional</string>
-    <string name="label_invalid">invalid</string>
-    <string name="label_delete">delete</string>
-    <string name="label_edit">edit</string>
-    <string name="label_copy">copy</string>
-    <string name="label_paste">paste</string>
-    <string name="label_print">print</string>
-    <string name="label_view">view</string>
-    <string name="label_create">create</string>
-    <string name="label_customize">customize</string>
-    <string name="label_language">language</string>
-    <string name="label_region">region</string>
-    <string name="label_font">font</string>
-    <string name="label_color">color</string>
-    <string name="label_sound">sound</string>
-    <string name="label_vibration">vibration</string>
-    <string name="label_notification">notification</string>
-    <string name="label_privacy">privacy</string>
-    <string name="label_security">security</string>
-    <string name="label_backup">backup</string>
-    <string name="label_restore">restore</string>
-    <string name="label_help">help</string>
-    <string name="label_about">about</string>
-    <string name="label_terms">terms</string>
-    <string name="label_feedback">feedback</string>
-    <string name="label_progress">progress</string>
-    <string name="label_completed">completed</string>
-    <string name="label_cancelled">cancelled</string>
-    <string name="label_failed">failed</string>
-    <string name="label_retry">retry</string>
-    <string name="label_searching">searching</string>
-    <string name="label_loading">loading</string>
-    <string name="label_connecting">connecting</string>
-    <string name="label_disconnecting">disconnecting</string>
-    <string name="label_offline">offline</string>
-    <string name="label_online">online</string>
-    <string name="label_synced">synced</string>
-    <string name="label_unsynced">unsynced</string>
-    <string name="label_yes">yes</string>
-    <string name="label_no">no</string>
-    <string name="label_ok">ok</string>
-    <string name="label_badminton">badminton</string>
-    <string name="label_football">football</string>
-    <string name="label_sport">sport</string>
-    <string name="label_discard">discard</string>
-    <string name="label_lion">lion</string>
-    <string name="label_dog">dog</string>
-    <string name="label_add">add</string>
-    <string name="label_remove">remove</string>
-    <string name="label_rename">rename</string>
-    <string name="label_move">move</string>
-    <string name="label_cat">cat</string>
-    <string name="label_follow">follow</string>
-    <string name="label_unfollow">unfollow</string>
-    <string name="label_like">like</string>
-    <string name="label_dislike">dislike</string>
-    <string name="label_comment">comment</string>
-    <string name="label_reply">reply</string>
-    <string name="label_archive">archive</string>
-    <string name="label_refresh">refresh</string>
+    <string-array name="data">
+
+        <item>settings</item>
+        <item>profile</item>
+        <item>message</item>
+        <item>search</item>
+        <item>connect</item>
+        <item>play</item>
+        <item>save</item>
+        <item>confirm</item>
+        <item>high</item>
+        <item>light</item>
+        <item>news</item>
+        <item>large</item>
+        <item>communication</item>
+        <item>call</item>
+        <item>photo</item>
+        <item>music</item>
+        <item>game</item>
+        <item>weather</item>
+        <item>map</item>
+        <item>calendar</item>
+        <item>reminder</item>
+        <item>list</item>
+        <item>share</item>
+        <item>report</item>
+        <item>support</item>
+        <item>exit</item>
+        <item>back</item>
+        <item>menu</item>
+        <item>more</item>
+        <item>first</item>
+        <item>previous</item>
+        <item>today</item>
+        <item>week</item>
+        <item>year</item>
+        <item>january</item>
+        <item>wednesday</item>
+        <item>friday</item>
+        <item>time</item>
+        <item>morning</item>
+        <item>evening</item>
+        <item>available</item>
+        <item>active</item>
+        <item>visible</item>
+        <item>full</item>
+        <item>required</item>
+        <item>valid</item>
+        <item>error</item>
+        <item>warning</item>
+        <item>success</item>
+        <item>information</item>
+        <item>update</item>
+        <item>download</item>
+        <item>install</item>
+        <item>open</item>
+        <item>close</item>
+        <item>start</item>
+        <item>stop</item>
+        <item>up</item>
+        <item>down</item>
+        <item>next</item>
+        <item>before</item>
+        <item>load</item>
+        <item>cancel</item>
+        <item>low</item>
+        <item>off</item>
+        <item>dark</item>
+        <item>old</item>
+        <item>small</item>
+        <item>account</item>
+        <item>chat</item>
+        <item>email</item>
+        <item>video</item>
+        <item>book</item>
+        <item>movie</item>
+        <item>navigation</item>
+        <item>note</item>
+        <item>less</item>
+        <item>last</item>
+        <item>tomorrow</item>
+        <item>month</item>
+        <item>february</item>
+        <item>thursday</item>
+        <item>saturday</item>
+        <item>clock</item>
+        <item>afternoon</item>
+        <item>night</item>
+        <item>unavailable</item>
+        <item>inactive</item>
+        <item>hidden</item>
+        <item>empty</item>
+        <item>optional</item>
+        <item>invalid</item>
+        <item>delete</item>
+        <item>edit</item>
+        <item>copy</item>
+        <item>paste</item>
+        <item>print</item>
+        <item>view</item>
+        <item>create</item>
+        <item>customize</item>
+        <item>language</item>
+        <item>region</item>
+        <item>font</item>
+        <item>color</item>
+        <item>sound</item>
+        <item>vibration</item>
+        <item>notification</item>
+        <item>privacy</item>
+        <item>security</item>
+        <item>backup</item>
+        <item>restore</item>
+        <item>help</item>
+        <item>about</item>
+        <item>terms</item>
+        <item>feedback</item>
+        <item>progress</item>
+        <item>completed</item>
+        <item>cancelled</item>
+        <item>failed</item>
+        <item>retry</item>
+        <item>searching</item>
+        <item>loading</item>
+        <item>connecting</item>
+        <item>disconnecting</item>
+        <item>offline</item>
+        <item>online</item>
+        <item>synced</item>
+        <item>unsynced</item>
+        <item>yes</item>
+        <item>no</item>
+        <item>ok</item>
+        <item>badminton</item>
+        <item>football</item>
+        <item>sport</item>
+        <item>discard</item>
+        <item>lion</item>
+        <item>dog</item>
+        <item>add</item>
+        <item>remove</item>
+        <item>rename</item>
+        <item>move</item>
+        <item>cat</item>
+        <item>follow</item>
+        <item>unfollow</item>
+        <item>like</item>
+        <item>dislike</item>
+        <item>comment</item>
+        <item>reply</item>
+        <item>archive</item>
+        <item>refresh</item>
+    </string-array>
 </resources>

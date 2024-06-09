@@ -1,154 +1,156 @@
 <resources>
     <string name="app_name">stringperformance</string>
 
-    <string name="label_settings">Pengaturan</string>
-    <string name="label_profile">Profil</string>
-    <string name="label_message">Pesan</string>
-    <string name="label_search">Pencarian</string>
-    <string name="label_connect">Hubungkan</string>
-    <string name="label_play">Putar</string>
-    <string name="label_save">Simpan</string>
-    <string name="label_confirm">Konfirmasi</string>
-    <string name="label_high">Tinggi</string>
-    <string name="label_light">Cahaya</string>
-    <string name="label_news">Berita</string>
-    <string name="label_large">Besar</string>
-    <string name="label_communication">Komunikasi</string>
-    <string name="label_call">Telepon</string>
-    <string name="label_photo">Foto</string>
-    <string name="label_music">Musik</string>
-    <string name="label_game">Permainan</string>
-    <string name="label_weather">Cuaca</string>
-    <string name="label_map">Peta</string>
-    <string name="label_calendar">Kalender</string>
-    <string name="label_reminder">Pengingat</string>
-    <string name="label_list">Daftar</string>
-    <string name="label_share">Bagikan</string>
-    <string name="label_report">Laporkan</string>
-    <string name="label_support">Dukungan</string>
-    <string name="label_exit">Keluar</string>
-    <string name="label_back">Kembali</string>
-    <string name="label_menu">Menu</string>
-    <string name="label_more">Lainnya</string>
-    <string name="label_first">Pertama</string>
-    <string name="label_previous">Sebelumnya</string>
-    <string name="label_today">Hari ini</string>
-    <string name="label_week">Minggu</string>
-    <string name="label_year">Tahun</string>
-    <string name="label_january">Januari</string>
-    <string name="label_wednesday">Rabu</string>
-    <string name="label_friday">Jumat</string>
-    <string name="label_am">AM</string>
-    <string name="label_morning">Pagi</string>
-    <string name="label_evening">Sore</string>
-    <string name="label_available">Tersedia</string>
-    <string name="label_active">Aktif</string>
-    <string name="label_visible">Terlihat</string>
-    <string name="label_full">Penuh</string>
-    <string name="label_required">Diperlukan</string>
-    <string name="label_valid">Valid</string>
-    <string name="label_error">Kesalahan</string>
-    <string name="label_warning">Peringatan</string>
-    <string name="label_success">Sukses</string>
-    <string name="label_information">Informasi</string>
-    <string name="label_update">Pembaruan</string>
-    <string name="label_download">Unduh</string>
-    <string name="label_install">Instal</string>
-    <string name="label_open">Buka</string>
-    <string name="label_close">Tutup</string>
-    <string name="label_start">Mulai</string>
-    <string name="label_stop">Hentikan</string>
-    <string name="label_up">Atas</string>
-    <string name="label_down">Bawah</string>
-    <string name="label_next">Berikutnya</string>
-    <string name="label_before">Sebelum</string>
-    <string name="label_load">Muat</string>
-    <string name="label_cancel">Batal</string>
-    <string name="label_low">Rendah</string>
-    <string name="label_off">Mati</string>
-    <string name="label_dark">Gelap</string>
-    <string name="label_old">Lama</string>
-    <string name="label_small">Kecil</string>
-    <string name="label_account">Akun</string>
-    <string name="label_chat">Obrolan</string>
-    <string name="label_email">Email</string>
-    <string name="label_video">Video</string>
-    <string name="label_book">Buku</string>
-    <string name="label_movie">Film</string>
-    <string name="label_navigation">Navigasi</string>
-    <string name="label_note">Catatan</string>
-    <string name="label_less">Kurang</string>
-    <string name="label_last">Terakhir</string>
-    <string name="label_tomorrow">Besok</string>
-    <string name="label_month">Bulan</string>
-    <string name="label_february">Februari</string>
-    <string name="label_thursday">Kamis</string>
-    <string name="label_saturday">Sabtu</string>
-    <string name="label_pm">PM</string>
-    <string name="label_afternoon">Sore</string>
-    <string name="label_night">Malam</string>
-    <string name="label_unavailable">Tidak tersedia</string>
-    <string name="label_inactive">Tidak aktif</string>
-    <string name="label_hidden">Tersembunyi</string>
-    <string name="label_empty">Kosong</string>
-    <string name="label_optional">Opsional</string>
-    <string name="label_invalid">Tidak valid</string>
-    <string name="label_delete">Hapus</string>
-    <string name="label_edit">Edit</string>
-    <string name="label_copy">Salin</string>
-    <string name="label_paste">Tempel</string>
-    <string name="label_print">Cetak</string>
-    <string name="label_view">Lihat</string>
-    <string name="label_create">Buat</string>
-    <string name="label_customize">Sesuaikan</string>
-    <string name="label_language">Bahasa</string>
-    <string name="label_region">Wilayah</string>
-    <string name="label_font">Font</string>
-    <string name="label_color">Warna</string>
-    <string name="label_sound">Suara</string>
-    <string name="label_vibration">Getaran</string>
-    <string name="label_notification">Notifikasi</string>
-    <string name="label_privacy">Privasi</string>
-    <string name="label_security">Keamanan</string>
-    <string name="label_backup">Cadangan</string>
-    <string name="label_restore">Pulihkan</string>
-    <string name="label_help">Bantuan</string>
-    <string name="label_about">Tentang</string>
-    <string name="label_terms">Ketentuan</string>
-    <string name="label_feedback">Umpan Balik</string>
-    <string name="label_progress">Kemajuan</string>
-    <string name="label_completed">Selesai</string>
-    <string name="label_cancelled">Dibatalkan</string>
-    <string name="label_failed">Gagal</string>
-    <string name="label_retry">Coba lagi</string>
-    <string name="label_searching">Mencari</string>
-    <string name="label_loading">Memuat</string>
-    <string name="label_connecting">Menghubungkan</string>
-    <string name="label_disconnecting">Memutuskan</string>
-    <string name="label_offline">Offline</string>
-    <string name="label_online">Online</string>
-    <string name="label_synced">Tersinkronisasi</string>
-    <string name="label_unsynced">Tidak tersinkronisasi</string>
-    <string name="label_yes">Ya</string>
-    <string name="label_no">Tidak</string>
-    <string name="label_ok">Oke</string>
-    <string name="label_badminton">Bulu Tangkis</string>
-    <string name="label_football">Sepak Bola</string>
-    <string name="label_sport">Olahraga</string>
-    <string name="label_discard">Buang</string>
-    <string name="label_lion">Singa</string>
-    <string name="label_dog">Anjing</string>
-    <string name="label_add">Tambah</string>
-    <string name="label_remove">Hapus</string>
-    <string name="label_rename">Ganti nama</string>
-    <string name="label_move">Pindahkan</string>
-    <string name="label_cat">Kucing</string>
-    <string name="label_follow">Ikuti</string>
-    <string name="label_unfollow">Berhenti mengikuti</string>
-    <string name="label_like">Suka</string>
-    <string name="label_dislike">Tidak suka</string>
-    <string name="label_comment">Komentar</string>
-    <string name="label_reply">Balas</string>
-    <string name="label_archive">Arsipkan</string>
-    <string name="label_refresh">Segarkan</string>
+    <string-array name="data">
+        <item>Pengaturan</item>
+        <item>Profil</item>
+        <item>Pesan</item>
+        <item>Pencarian</item>
+        <item>Hubungkan</item>
+        <item>Putar</item>
+        <item>Simpan</item>
+        <item>Konfirmasi</item>
+        <item>Tinggi</item>
+        <item>Ringan</item>
+        <item>Berita</item>
+        <item>Besar</item>
+        <item>Komunikasi</item>
+        <item>Panggilan</item>
+        <item>Foto</item>
+        <item>Musik</item>
+        <item>Game</item>
+        <item>Cuaca</item>
+        <item>Peta</item>
+        <item>Kalender</item>
+        <item>Pengingat</item>
+        <item>Daftar</item>
+        <item>Bagikan</item>
+        <item>Laporkan</item>
+        <item>Dukungan</item>
+        <item>Keluar</item>
+        <item>Kembali</item>
+        <item>Menu</item>
+        <item>Lainnya</item>
+        <item>Pertama</item>
+        <item>Sebelumnya</item>
+        <item>Hari ini</item>
+        <item>Minggu</item>
+        <item>Tahun</item>
+        <item>Januari</item>
+        <item>Rabu</item>
+        <item>Jumat</item>
+        <item>Waktu</item>
+        <item>Pagi</item>
+        <item>Sore</item>
+        <item>Tersedia</item>
+        <item>Aktif</item>
+        <item>Terlihat</item>
+        <item>Penuh</item>
+        <item>Diperlukan</item>
+        <item>Valid</item>
+        <item>Kesalahan</item>
+        <item>Peringatan</item>
+        <item>Berhasil</item>
+        <item>Informasi</item>
+        <item>Perbarui</item>
+        <item>Unduh</item>
+        <item>Instal</item>
+        <item>Buka</item>
+        <item>Tutup</item>
+        <item>Mulai</item>
+        <item>Hentikan</item>
+        <item>Naik</item>
+        <item>Turun</item>
+        <item>Selanjutnya</item>
+        <item>Sebelum</item>
+        <item>Muat</item>
+        <item>Batal</item>
+        <item>Rendah</item>
+        <item>Mati</item>
+        <item>Gelap</item>
+        <item>Lama</item>
+        <item>Kecil</item>
+        <item>Akun</item>
+        <item>Obrolan</item>
+        <item>Email</item>
+        <item>Video</item>
+        <item>Buku</item>
+        <item>Film</item>
+        <item>Navigasi</item>
+        <item>Catatan</item>
+        <item>Kurang</item>
+        <item>Terakhir</item>
+        <item>Besok</item>
+        <item>Bulan</item>
+        <item>Februari</item>
+        <item>Kamis</item>
+        <item>Sabtu</item>
+        <item>Jam</item>
+        <item>Siang</item>
+        <item>Malam</item>
+        <item>Tidak tersedia</item>
+        <item>Tidak aktif</item>
+        <item>Tersembunyi</item>
+        <item>Kosong</item>
+        <item>Opsional</item>
+        <item>Tidak valid</item>
+        <item>Hapus</item>
+        <item>Edit</item>
+        <item>Salin</item>
+        <item>Tempel</item>
+        <item>Cetak</item>
+        <item>Lihat</item>
+        <item>Buat</item>
+        <item>Sesuaikan</item>
+        <item>Bahasa</item>
+        <item>Wilayah</item>
+        <item>Font</item>
+        <item>Warna</item>
+        <item>Suara</item>
+        <item>Getaran</item>
+        <item>Notifikasi</item>
+        <item>Privasi</item>
+        <item>Keamanan</item>
+        <item>Cadangan</item>
+        <item>Pulihkan</item>
+        <item>Bantuan</item>
+        <item>Tentang</item>
+        <item>Ketentuan</item>
+        <item>Umpan balik</item>
+        <item>Kemajuan</item>
+        <item>Selesai</item>
+        <item>Dibatalkan</item>
+        <item>Gagal</item>
+        <item>Coba lagi</item>
+        <item>Mencari</item>
+        <item>Memuat</item>
+        <item>Menghubungkan</item>
+        <item>Memutuskan sambungan</item>
+        <item>Offline</item>
+        <item>Online</item>
+        <item>Tersinkronisasi</item>
+        <item>Tidak tersinkronisasi</item>
+        <item>Ya</item>
+        <item>Tidak</item>
+        <item>Oke</item>
+        <item>Bulutangkis</item>
+        <item>Sepak bola</item>
+        <item>Olahraga</item>
+        <item>Buang</item>
+        <item>Singa</item>
+        <item>Anjing</item>
+        <item>Tambah</item>
+        <item>Hapus</item>
+        <item>Ganti nama</item>
+        <item>Pindahkan</item>
+        <item>Kucing</item>
+        <item>Ikuti</item>
+        <item>Berhenti mengikuti</item>
+        <item>Suka</item>
+        <item>Tidak suka</item>
+        <item>Komentar</item>
+        <item>Balas</item>
+        <item>Arsipkan</item>
+        <item>Segarkan</item>
+    </string-array>
 </resources>
