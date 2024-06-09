@@ -15,6 +15,11 @@ class MainViewModel : ViewModel() {
     private val _wordController = MutableStateFlow("String Resources")
     val wordController = _wordController.asStateFlow()
 
+    private val _timerController = MutableStateFlow("0 ms")
+    val timerController = _timerController.asStateFlow()
+
+    private var startTime: Long = 0L
+
     fun initDb(context: Context, dbHelper: DbHelper) {
         val enStrings = context.resources.getStringArray(R.array.data)
 
@@ -64,6 +69,8 @@ class MainViewModel : ViewModel() {
             cursor.close()
         }
         Log.d("TAG", "loadFromDb: ${_wordController.value}")
+
+        _timerController.value = "${System.currentTimeMillis() - startTime} ms"
     }
 
     fun loadFromXml(context: Context) {
@@ -72,10 +79,14 @@ class MainViewModel : ViewModel() {
         val strings = context.resources.getStringArray(R.array.data)
         _wordController.value = strings.joinToString(", ")
         Log.d("TAG", "loadFromXml: ${_wordController.value}")
+
+        _timerController.value = "${System.currentTimeMillis() - startTime} ms"
     }
 
-    fun resetWordController() {
+    private fun resetWordController() {
         _wordController.value = ""
         Log.d("TAG", "resetWordController: ${_wordController.value}")
+
+        startTime = System.currentTimeMillis()
     }
 }

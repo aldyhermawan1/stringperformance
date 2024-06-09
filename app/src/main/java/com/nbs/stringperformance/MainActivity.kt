@@ -1,7 +1,6 @@
 package com.nbs.stringperformance
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -59,8 +58,7 @@ fun StringScreen(
 ) {
     val context = LocalContext.current
     val wordController by viewModel.wordController.collectAsState()
-
-    Log.d("TAG", "StringScreen: RECOMPOSE ${wordController}")
+    val timerController by viewModel.timerController.collectAsState()
 
     LaunchedEffect(Unit) {
         viewModel.initDb(context, dbHelper)
@@ -80,6 +78,8 @@ fun StringScreen(
             .verticalScroll(rememberScrollState()),
     ) {
         Text(text = wordController)
+        Spacer(modifier = Modifier.height(24.dp))
+        Text(text = "Time taken: $timerController")
         Spacer(modifier = Modifier.height(24.dp))
         Button(
             onClick = { viewModel.loadFromXml(context) },
