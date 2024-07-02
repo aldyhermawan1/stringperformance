@@ -5,10 +5,12 @@ import android.content.Context
 import android.provider.BaseColumns
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import com.google.gson.Gson
 import com.nbs.stringperformance.data.DbContract
 import com.nbs.stringperformance.data.DbHelper
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import java.io.InputStream
 
 
 class MainViewModel : ViewModel() {
@@ -77,8 +79,32 @@ class MainViewModel : ViewModel() {
         resetWordController()
 
         val strings = context.resources.getStringArray(R.array.data)
-        _wordController.value = strings.joinToString(", ")
+        for (string in strings) {
+            val prefix = if (_wordController.value.isEmpty()) {
+                ""
+            } else "${_wordController.value}, "
+            _wordController.value = prefix + string
+        }
+//        _wordController.value = strings.joinToString(", ")
         Log.d("TAG", "loadFromXml: ${_wordController.value}")
+
+        _timerController.value = "${System.currentTimeMillis() - startTime} ms"
+    }
+
+    fun loadFromJson(context: Context) {
+        resetWordController()
+
+        val inputStream: InputStream = context.assets.open("strings.json")
+        val jsonString = inputStream.bufferedReader().use { it.readText() }
+        val json = Gson().fromJson(jsonString, Map::class.java)
+
+        for (i in 1..150) {
+            val prefix = if (_wordController.value.isEmpty()) {
+                ""
+            } else "${_wordController.value}, "
+            _wordController.value = prefix + json["item$i"]
+        }
+        Log.d("TAG", "loadFromJson: ${_wordController.value}")
 
         _timerController.value = "${System.currentTimeMillis() - startTime} ms"
     }

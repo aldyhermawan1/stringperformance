@@ -94,5 +94,12 @@ fun StringScreen(
         ) {
             Text(text = "Load from DB")
         }
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(
+            onClick = { viewModel.loadFromJson(context) },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(text = "Load from JSON")
+        }
     }
 }
