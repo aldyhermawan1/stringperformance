@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import com.google.gson.Gson
 import com.nbs.stringperformance.data.DbContract
 import com.nbs.stringperformance.data.DbHelper
+import com.nbs.stringperformance.data.stringResources
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import java.io.InputStream
@@ -75,7 +76,8 @@ class MainViewModel : ViewModel() {
         _timerController.value = "${System.currentTimeMillis() - startTime} ms"
     }
 
-    fun loadFromXml(context: Context) {
+    fun loadFromXmlArray(context: Context) {
+
         resetWordController()
 
         val strings = context.resources.getStringArray(R.array.data)
@@ -85,7 +87,22 @@ class MainViewModel : ViewModel() {
             } else "${_wordController.value}, "
             _wordController.value = prefix + string
         }
-//        _wordController.value = strings.joinToString(", ")
+
+        Log.d("TAG", "loadFromXml: ${_wordController.value}")
+
+        _timerController.value = "${System.currentTimeMillis() - startTime} ms"
+    }
+
+    fun loadFromXml(context: Context) {
+        resetWordController()
+
+        for (string in stringResources) {
+            val prefix = if (_wordController.value.isEmpty()) {
+                ""
+            } else "${_wordController.value}, "
+            _wordController.value = prefix + context.resources.getString(string)
+        }
+
         Log.d("TAG", "loadFromXml: ${_wordController.value}")
 
         _timerController.value = "${System.currentTimeMillis() - startTime} ms"

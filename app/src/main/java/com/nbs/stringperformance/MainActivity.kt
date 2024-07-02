@@ -89,6 +89,13 @@ fun StringScreen(
         }
         Spacer(modifier = Modifier.height(16.dp))
         Button(
+            onClick = { viewModel.loadFromXmlArray(context) },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(text = "Load from XML Array")
+        }
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(
             onClick = { viewModel.loadFromDb(dbHelper) },
             modifier = Modifier.fillMaxWidth()
         ) {
